@@ -46,13 +46,16 @@ impl Grid {
 
 #[cfg(test)]
 mod tests {
+    //! tests of the game
     use crate::*;
 
     #[test]
     fn test_empty_grid() {
+        //! Given an initial grid
         let x_size=5;
         let y_size=13;
         let grid = Grid::generate_empty(x_size, y_size);
+
         assert_eq!(grid.size, (x_size, y_size));
         let mut number_of_squares = 0;
 
